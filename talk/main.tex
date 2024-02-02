@@ -1,0 +1,147 @@
+\documentclass[color=pdftex,dvipsnames,usenames,svgnames,table]{guitbeamer}
+
+\usepackage{xcolor}
+\usepackage[color]{guit}
+\usepackage{type1cm}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{enumerate items}[default]
+\setbeamertemplate{footline}[text line]{}
+\setbeamercovered{invisible}
+
+% Make some environments for code
+\lstnewenvironment{bashList}
+  {\lstset{language=bash,
+           basicstyle=\ttfamily,
+           showstringspaces=false,
+           columns=fullflexible,
+           keepspaces=true,
+           escapeinside=`',
+           frame=single,
+           backgroundcolor=\color{RoyalBlue!10}}}
+  {}
+
+\lstnewenvironment{bashListSmall}
+  {\lstset{language=bash,
+           basicstyle=\ttfamily\small,
+           showstringspaces=false,
+           columns=fullflexible,
+           keepspaces=true,
+           escapeinside=`',
+           frame=single,
+           backgroundcolor=\color{RoyalBlue!10}}}
+  {}
+
+\lstnewenvironment{bashListScript}
+  {\lstset{language=bash,
+           basicstyle=\ttfamily\scriptsize,
+           showstringspaces=false,
+           columns=fullflexible,
+           keepspaces=true,
+           escapeinside=`',
+           frame=single,
+           backgroundcolor=\color{RoyalBlue!10}}}
+  {}
+
+\lstnewenvironment{cList}
+  {\lstset{language=C,
+           basicstyle=\ttfamily,
+           showstringspaces=false,
+           columns=fullflexible,
+           keepspaces=true,
+           escapeinside=`',
+           frame=single,
+           backgroundcolor=\color{RoyalBlue!10}}}
+  {}
+
+\lstnewenvironment{cListSmall}
+  {\lstset{language=C,
+           basicstyle=\ttfamily\small,
+           showstringspaces=false,
+           columns=fullflexible,
+           keepspaces=true,
+           escapeinside=`',
+           frame=single,
+           backgroundcolor=\color{RoyalBlue!10}}}
+  {}
+
+\lstnewenvironment{cListScript}
+  {\lstset{language=C,
+           basicstyle=\ttfamily\scriptsize,
+           showstringspaces=false,
+           columns=fullflexible,
+           keepspaces=true,
+           escapeinside=`',
+           frame=single,
+           backgroundcolor=\color{RoyalBlue!10}}}
+  {}
+
+\lstnewenvironment{pyList}
+  {\lstset{language=Python,
+           basicstyle=\ttfamily,
+           showstringspaces=false,
+           columns=fullflexible,
+           keepspaces=true,
+           escapeinside=`',
+           frame=single,
+           backgroundcolor=\color{RoyalBlue!10}}}
+  {}
+
+\lstnewenvironment{javaListSmall}
+  {\lstset{language=Java,
+           basicstyle=\ttfamily\scriptsize,
+           showstringspaces=false,
+           columns=fullflexible,
+           keepspaces=true,
+           escapeinside=`',
+           frame=single,
+           backgroundcolor=\color{RoyalBlue!10}}}
+  {}
+
+\lstnewenvironment{pyListSmall}
+  {\lstset{language=Python,
+           basicstyle=\ttfamily\small,
+           showstringspaces=false,
+           columns=fullflexible,
+           keepspaces=true,
+           escapeinside=`',
+           frame=single,
+           backgroundcolor=\color{RoyalBlue!10}}}
+  {}
+
+\lstnewenvironment{pyListScript}
+  {\lstset{language=Python,
+           basicstyle=\ttfamily\scriptsize,
+           showstringspaces=false,
+           columns=fullflexible,
+           keepspaces=true,
+           escapeinside=`',
+           frame=single,
+           backgroundcolor=\color{RoyalBlue!10}}}
+  {}
+
+\newcommand{\red}{\color{DarkRed}}
+\newcommand{\blue}{\color{DarkBlue}}
+\newcommand{\httpsURL}[1]{{\blue \href{https://#1}{\tt #1}}}
+\newcommand{\httpURL}[1]{{\blue \href{http://#1}{\tt #1}}}
+\renewcommand{\ttdefault}{pcr}
+
+\title{Not All Instances of Hard Problems are Difficult$^\dagger$}
+\author{Will Bryan and Andrew Mertz}
+\date{February 23, 2024}
+
+\begin{document}
+
+\include{introduction}
+\include{day01}
+\include{day16}
+\include{day18}
+\include{day20}
+\include{day21}
+\include{day24}
+\include{conclusion}
+
+\end{document}
