@@ -2,8 +2,8 @@
 A talk on some problems from AoC 2023.
 
 ### Abstract
-When faced with hard problems, programmers tend to think of ways to generalize problems. Rather than solve just one
-instance, we prefer to solve all instances of some general form. Thus, we can make a problem even more complex as we
+When faced with hard problems, computer scientists tend to think of ways to generalize problems. Rather than solve just
+one instance, we prefer to solve all instances of some general form. Thus, we can make a problem even more complex as we
 consider edge cases, scaling behavior, memory efficiency, and so on. However, sometimes simpler is better. With small
 or heavily constrained inputs, efficiency may not be necessary. Solving the general case may not be necessary. If you
 only need to solve one instance, that input may simplify the approach greatly. The potential for simple solutions for
