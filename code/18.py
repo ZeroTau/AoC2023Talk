@@ -1,6 +1,6 @@
 import argparse
 parser = argparse.ArgumentParser()
-parser.add_argument("-file", "--file", default="testinput18")
+parser.add_argument("-f", "--file", default="inputs/testinput18")
 filename = parser.parse_args().file
 
 class Point():
