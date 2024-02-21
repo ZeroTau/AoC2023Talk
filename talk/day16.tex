@@ -1,0 +1,77 @@
+\begin{frame}
+\frametitle{Day 16: Light Propagation}
+This problem asks us to illuminate as many cells of a room as possible by
+shining a light from any cell on an outer edge.\vspace{3em}
+
+This is complicated by the fact that there are mirrors and beam splitters
+in the room.
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Day 16: Rules}
+If the beam encounters empty space (\verb!.!), it continues in the same direction.\vfill
+
+If the beam encounters a mirror (\verb!/! or \verb!\!), the beam is reflected 90 degrees depending on the angle of the mirror.\vfill
+
+If the beam encounters the pointy end of a splitter (\verb!|! or \verb!-!), the beam passes as if the splitter were empty space.\vfill
+
+If the beam encounters the flat side of a splitter (\verb!|! or \verb!-!), the beam is split into two beams going in each of the two directions the splitter's pointy ends are pointing.\vfill
+
+Beams do not interact with other beams
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Day 16: Example}
+
+\begin{center}
+\begin{minipage}{0.45\textwidth}
+\begin{center}
+\begin{verbatim}
+.|...\....
+|.-.\.....
+.....|-...
+........|.
+..........
+.........\
+..../.\\..
+.-.-/..|..
+.|....-|.\
+..//.|....
+\end{verbatim}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\begin{center}
+\begin{verbatim}
+>|<<<\....
+|v-.\^....
+.v...|->>>
+.v...v^.|.
+.v...v^...
+.v...v^..\
+.v../2\\..
+<->-/vv|..
+.|<<<2-|.\
+.v//.|.v..
+\end{verbatim}
+\end{center}
+\end{minipage}
+\end{center}
+\vfill
+
+In this example, 46 cells are {\it illuminated} when light shines in from the left in the top left cell.
+\end{frame}
+
+\begin{frame}
+\frametitle{Day 16: Instance Size}
+
+Our problem input is a room with 110 rows and 110 columns.\vfill
+
+So there are 12100 cells.\vfill
+
+Our instance has 1191 objects in the room.\vfill
+
+What are the challenges of this problem?\vfill
+
+Let's look at a solution.
+\end{frame}
