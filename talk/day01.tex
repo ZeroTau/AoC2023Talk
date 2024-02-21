@@ -1,0 +1,71 @@
+\begin{frame}
+\frametitle{Day 1: Sum of Digits}
+
+This problem asks us to parse lines of input to find the first and last digits contained within.\vfill
+
+Then combine the first digit and the last digit to form a single two-digit number, and sum all such numbers.\vfill
+
+The catch is the digits could be spelled out or written as numbers.
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Day 1: Example}
+
+\begin{verbatim}
+two1nine
+eightwothree
+abcone2threexyz
+xtwone3four
+4nineeightseven2
+zoneight234
+7pqrstsixteen
+\end{verbatim}
+
+Yields the sum $29 + 83 + 13 + 24 + 42 + 14 + 76 = 281$.
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Day 1: Possible Approaches}
+
+\begin{itemize}
+    \item Use a regular expression
+    \item Build our own parser
+    \item Use tools like sed or awk
+    \item Use a parser generator like ANTLR
+\end{itemize}\vfill
+
+Note the input is small (around 22KB).\vfill
+
+While we can find the digits with only one pass over the input. Even if we
+take multiple passes, we can still solve the problem quickly for input
+this small.
+\end{frame}
+
+\begin{frame}
+\frametitle{Day 1: Possible Approaches}
+
+\begin{itemize}
+    \item Use a regular expression
+    \item Build our own parser
+    \item Use tools like sed or awk
+    \item Use a parser generator like ANTLR
+\end{itemize}\vfill
+
+Note the input is small (around 22KB).\vfill
+
+While we can find the digits with only one pass over the input. Even if we
+take multiple passes, we can still solve the problem quickly for input
+this small.
+\end{frame}
+
+\begin{frame}
+\frametitle{Day 1: Solutions}
+
+\begin{itemize}
+    \item Python
+    \item Bash pipeline
+    \item Circuit
+\end{itemize}
+
+\end{frame}
