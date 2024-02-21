@@ -1,0 +1,63 @@
+\begin{frame}
+\frametitle{Day 24: Never Tell Me The Odds}
+
+You're surrounded by hailstones, each with a given position and velocity\vfill
+PX, PY, PZ @ VX, VY, VZ\vfill
+
+Part 1: Looking forward in time, how many of the hailstones' paths will intersect within a test area?\vfill
+
+Make it simpler:
+\begin{itemize}
+    \item Forward in time: t $>$ 0
+    \item Paths will intersect: hailstones themselves don't have to collide
+    \item Within a test area: specific bounds
+    \item Also, ignore the Z axis.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Day 24: Never Tell Me The Odds}
+
+If we know a starting point and our change, what are we actually working with?\vfill % Lines
+
+How easy is it to see if lines intersect?\vfill % Very easy
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Day 24: Never Tell Me The Odds, Continued}
+    
+Although the paths cross, no hailstones will actually collide on their current course. If you throw a rock just right, you can hit every hailstone! \vfill
+Thanks to magic, the rock can start at any integer position and velocity. \vfill
+Where and how quickly to throw the rock? \vfill
+    
+\end{frame}
+
+\begin{frame}
+\frametitle{Day 24: Never Tell Me The Odds, Continued}
+    
+Now we don't know PX, PY, PZ, VX, VY, or VZ for our rock\vfill
+
+We do know that at some time $T$, our rock will collide with a hailstone at position $X, Y, Z$\vfill
+
+No guarantee that $T_1$ = 1, $T_2$ = 2, etc., so $T$ is unknown.\vfill
+    
+\end{frame}
+
+\begin{frame}
+\frametitle{Day 24: Putting Together the Unknowns}
+    
+So we have 7 unknowns: PX, PY, PZ, VX, VY, VZ, and T.\vfill
+
+What do we know?\vfill
+
+At $T_1$, $X_{rock}, Y_{rock}, Z_{rock} = X_{hail_1}, Y_{hail_1}, Z_{hail_1}$\vfill
+
+$Pos_T = Pos_{Start} + Velocity(T)$\linebreak
+$X_{rock} = PX + VX(T)$\linebreak
+$X_{hail_1} = PX_{hail_1} + VX_{hail_1}(T)$\vfill
+
+Now we're adding in equations with known variables.
+
+\end{frame}
