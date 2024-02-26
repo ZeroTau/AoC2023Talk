@@ -37,21 +37,34 @@ Pulses are processed in the order they are sent.
 \begin{frame}[fragile]
 \frametitle{Day 20: Example}
 
-\begin{center}
-\begin{minipage}{0.45\textwidth}
-\begin{center}
-\begin{verbatim}
+    \begin{center}
+        \begin{minipage}{0.45\textwidth}
+            \begin{center}
+                \begin{verbatim}
 btn -> a, b, c
 %a -> b
 %b -> c
 %c -> inv
 &inv -> a        
-\end{verbatim}
-\end{center}
-\end{minipage}
-\begin{minipage}{0.45\textwidth}
-\begin{center}
-\begin{verbatim}
+                \end{verbatim}
+            \end{center}
+        \end{minipage}
+        \begin{minipage}{0.45\textwidth}
+            \begin{center}
+                \includegraphics[width=\textwidth]{Day20ExampleGraph}
+            \end{center}
+        \end{minipage}
+    \end{center}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Day 20: Example}
+
+    \begin{center}
+        \begin{minipage}{0.45\textwidth}
+            \begin{center}
+                \begin{verbatim}
 btn -low-> a
 btn -low-> b
 btn -low-> c
@@ -62,33 +75,16 @@ inv -low-> a
 a -low-> b
 b -low-> c
 c -low-> inv
-inv -high-> a        
-\end{verbatim}
-\end{center}
-\end{minipage}
-\end{center}
-
-\end{frame}
-
-\begin{frame}[fragile]
-\frametitle{Day 20: Example Cont.}
-
-\begin{center}
-\begin{verbatim}
-                   a:1, b:1, c:1, inv:[c:0]
-btn -low-> a       a:0, b:1, c:1, inv:[c:0]
-btn -low-> b       a:0, b:0, c:1, inv:[c:0]
-btn -low-> c       a:0, b:0, c:0, inv:[c:0]
-a -high-> b        a:0, b:0, c:0, inv:[c:0]
-b -high-> c        a:0, b:0, c:0, inv:[c:0]
-c -high-> inv      a:0, b:0, c:0, inv:[c:1]
-inv -low-> a       a:1, b:0, c:0, inv:[c:1]
-a -low-> b         a:1, b:1, c:0, inv:[c:1]
-b -low-> c         a:1, b:1, c:1, inv:[c:1]
-c -low-> inv       a:1, b:1, c:1, inv:[c:0]
-inv -high-> a      a:1, b:1, c:1, inv:[c:0]
-\end{verbatim}
-\end{center}
+inv -high-> a      
+                \end{verbatim}
+            \end{center}
+        \end{minipage}
+        \begin{minipage}{0.45\textwidth}
+            \begin{center}
+                \includegraphics[width=\textwidth]{Day20ExampleGraph}
+            \end{center}
+        \end{minipage}
+    \end{center}
 
 \end{frame}
 
