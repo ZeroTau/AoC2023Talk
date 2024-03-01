@@ -3,8 +3,8 @@
 
 You have a collection of modules that can send and receive high or low pulses connected together. There are three main types:
 \begin{itemize}
-    \item Flip-flop modules $(\%)$, when receiving a low pulse, flip their internal state between sending a high pulse or a low pulse, defaulting to high.
-    \item Conjunction modules $(\&)$ remember the most recent pulses from each input, defaulting their memory to low - if all pulses in memory are high, it sends a low pulse, else high.
+    \item Flip-flop modules $(\%)$, when receiving a low pulse, flip their internal state before sending it as a pulse, defaulting to a low internal state. Does nothing on high pulse.
+    \item Conjunction modules $(\&)$ remember the most recent pulses received from each input. If all pulses in its memory are high, it send a low pulse. Else, sends a high pulse.
     \item There is a button/broadcast module that sends a low pulse to all of its destination modules.
 \end{itemize}\vfill
 
@@ -35,7 +35,7 @@ Pulses are processed in the order they are sent.
 \end{frame}
 
 \begin{frame}[fragile]
-\frametitle{Day 20: Example}
+\frametitle{Day 20: Example Connections}
 
     \begin{center}
         \begin{minipage}{0.45\textwidth}
@@ -59,7 +59,7 @@ btn -> a, b, c
 \end{frame}
 
 \begin{frame}[fragile]
-\frametitle{Day 20: Example}
+\frametitle{Day 20: Example Button Press}
 
     \begin{center}
         \begin{minipage}{0.45\textwidth}

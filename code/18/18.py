@@ -36,8 +36,11 @@ class Polygon():
         self.position = new_position
 
     def get_area(self) -> int:
-        # Pick's Theorem: A = i + b / 2 + 1
-        # Area = interior_area + boundary_points / 2 + 1
+        # Pick's Theorem: A = i + b / 2 - 1
+        # interior_area = interior_points + edge_points / 2 - 1
+        # interior_area - edge_points / 2 + 1 = interior_points
+        # interior_area + edge_points / 2 + 1 = interior_points + edge_points
+        # interior_points + edge_points = dug out area
         return int(abs(self.interior_area) + (self.perimeter // 2) + 1)
 
 
