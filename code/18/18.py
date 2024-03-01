@@ -32,6 +32,8 @@ class Polygon():
         # A = Summation( (y_i + y_(i+1)) * (x_i - x_(i+1)) * 1/2 )
         new_position = self.position.move(direction, distance)
         self.interior_area += ((self.position.y + new_position.y) * (self.position.x - new_position.x)) / 2
+        # Because either X or Y must be the same (only moving U,D,L,R), this formula also works:
+        # self.interior_area += self.position.y * (self.position.x - new_position.x)
         self.perimeter += distance
         self.position = new_position
 
