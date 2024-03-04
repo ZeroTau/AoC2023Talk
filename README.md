@@ -1,5 +1,5 @@
 # AoC2023Talk - Not All Instances of Hard Problems are Difficult
-A talk on some problems from AoC 2023. [slides](talk/main.pdf)
+A talk on some problems from AoC 2023. [slides](talk/main.pdf) [recording](https://www.youtube.com/watch?v=BEvhg_H6Apc)
 
 ### Abstract
 When faced with hard problems, computer scientists tend to think of ways to generalize problems. Rather than solve just
